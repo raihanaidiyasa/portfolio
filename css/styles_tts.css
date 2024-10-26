@@ -113,3 +113,68 @@ ul {
   color: #666;
   pointer-events: none;
 }
+
+@media (max-width: 768px) {
+  .container {
+      max-width: 600px;
+      padding: 10px;
+  }
+
+  #crossword {
+      grid-template-columns: repeat(10, 1fr);
+      gap: 3px;
+  }
+
+  .cell {
+      width: 35px;
+      height: 35px;
+      font-size: 16px;
+  }
+
+  #submit {
+      font-size: 14px;
+      padding: 8px 16px;
+  }
+
+  #score {
+      font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+      max-width: 100%;
+      padding: 10px;
+  }
+
+  .game-layout {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  #crossword {
+      grid-template-columns: repeat(10, 1fr);
+      gap: 2px;
+  }
+
+  .cell {
+      width: 30px;
+      height: 30px;
+      font-size: 14px;
+  }
+
+  #submit {
+      font-size: 14px;
+      padding: 8px 16px;
+      margin-top: 20px;
+  }
+
+  #score {
+      font-size: 14px;
+  }
+
+  #questions {
+      text-align: center;
+      margin-top: 20px;
+  }
+}
