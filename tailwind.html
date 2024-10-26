@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <header class="sticky top-0 bg-white p-4 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-lg font-bold">MahasiswaClean</div>
+            <nav class="space-x-4">
+                <a href="#home" class="hover:text-blue-500">Home</a>
+                <a href="#about" class="hover:text-blue-500">About</a>
+                <a href="#services" class="hover:text-blue-500">Services</a>
+                <a href="#contact" class="hover:text-blue-500">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home"class="bg-blue-500 text-white py-20">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Welcome to Our Service</h1>
+            <p class="mb-6">The best solution for your business needs.</p>
+            <button class="bg-white text-blue-500 px-6 py-3 rounded-full hover:bg-gray-200 transition duration-300">Get Started</button>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto">
+            <div class="md:flex md:items-center">
+                <div class="md:w-1/2 md:pr-10">
+                    <h2 class="text-3xl font-bold mb-6">About Us</h2>
+                    <p class="mb-6">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque aliquam, est nec lobortis molestie, libero sapien sodales nulla, id finibus odio justo sit amet risus. Vivamus vel arcu sed elit accumsan accumsan.
+                    </p>
+                    <p class="mb-6">
+                        Duis ut nibh vitae est sodales vehicula ut nec lorem. Nam ac ante eu nulla lacinia dapibus. In quis quam in velit ultricies tempus. Fusce nec tortor ligula. Phasellus auctor, orci et vehicula iaculis, dolor ipsum sodales nulla, in suscipit ligula leo nec sapien.
+                    </p>
+                    <p>
+                        Aliquam malesuada massa non massa suscipit, sed sollicitudin risus ullamcorper. Nulla vehicula risus nec pharetra vehicula. Curabitur a purus lacinia, malesuada est sit amet, pretium augue.
+                    </p>
+                </div>
+                <div class="md:w-1/2 mt-10 md:mt-0">
+                    <img src="https://via.placeholder.com/500x300" alt="About Us" class="w-full rounded-lg shadow-md">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-20">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-10">Our Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="bg-gray-200 p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-4">Service One</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                            Blanditiis quam libero modi mollitia quas voluptatibus nobis temporibus, ea illum deleniti, 
+                            consequuntur illo molestias quod impedit nemo, nam alias eligendi odio?
+                        </p>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div class="bg-gray-200 p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-4">Service Two</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur illo exercitationem rerum? 
+                            A quidem quia nostrum mollitia debitis? Cupiditate quia fuga consectetur vel nostrum minima, 
+                            dolorum libero laudantium amet labore?
+                        </p>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div class="bg-gray-200 p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-4">Service Three</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos, adipisci, quis est, 
+                            sit nihil facilis eligendi in laborum molestias expedita quaerat perspiciatis soluta temporibus velit 
+                            vel accusamus aut autem ipsum.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-gray-50 py-20">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-10">What Our Clients Say</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <p>"This service is amazing! It has transformed our business."</p>
+                    <p class="mt-4 font-bold">- Client Name</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <p>"Exceptional quality and customer support."</p>
+                    <p class="mt-4 font-bold">- Client Name</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <p>"I would highly recommend this to anyone."</p>
+                    <p class="mt-4 font-bold">- Client Name</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact"class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto text-center space-y-4">
+            <p>&copy; 2024 Your Company</p>
+            <div class="space-x-4">
+                <a href="#" class="hover:text-gray-400">Facebook</a>
+                <a href="#" class="hover:text-gray-400">Twitter</a>
+                <a href="#" class="hover:text-gray-400">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
