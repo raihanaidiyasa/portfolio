@@ -1,24 +1,38 @@
-// Memeriksa dukungan notifikasi dan service worker
-if ('serviceWorker' in navigator && 'PushManager' in window) {
+// Registrasi Service Worker
+if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js').then((registration) => {
-      console.log('Service Worker registered:', registration);
-      // Cek apakah pengguna sudah mengizinkan notifikasi
-      return Notification.requestPermission().then((permission) => {
-        if (permission === 'granted') {
-          console.log('Notification permission granted.');
-          // Daftarkan untuk menerima push notifications
-          registration.pushManager.subscribe({
-            userVisibleOnly: true,
-            applicationServerKey: '<YOUR_VAPID_PUBLIC_KEY>'  // Gantilah dengan public key dari VAPID
-          }).then((subscription) => {
-            console.log('Push subscription:', subscription);
-            // Kirimkan subscription ke server untuk disimpan dan digunakan untuk mengirimkan push
-          }).catch((err) => {
-            console.error('Push subscription failed:', err);
+      navigator.serviceWorker.register('/pwa-praktikum/sw.js')
+          .then(registration => {
+              console.log('Service Worker registered successfully:', registration.scope);
+          })
+          .catch(error => {
+              console.log('Service Worker registration failed:', error);
           });
-        }
-      });
-    });
   });
 }
+
+// Tombol Install PWA
+let deferredPrompt;
+const installBtn = document.getElementById('installBtn');
+
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+  installBtn.style.display = 'block';
+});
+
+installBtn.addEventListener('click', async () => {
+  if (deferredPrompt) {
+      deferredPrompt.prompt();
+      const { outcome } = await deferredPrompt.userChoice;
+      
+      if (outcome === 'accepted') {
+          console.log('Pengguna menerima instalasi');
+      } else {
+          console.log('Pengguna menolak instalasi');
+      }
+      
+      deferredPrompt = null;
+      installBtn.style.display = 'none';
+  }
+});

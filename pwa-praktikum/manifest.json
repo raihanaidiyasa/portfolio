@@ -1,10 +1,11 @@
 {
-  "name": "PWA Example",
-  "short_name": "PWA",
-  "start_url": "/pwa.html",
+  "name": "Contoh PWA Sederhana",
+  "short_name": "PWA Demo",
+  "description": "Aplikasi PWA pertama saya",
+  "start_url": "/pwa-praktikum/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#007BFF",
+  "theme_color": "#3498db",
   "icons": [
     {
       "src": "/pwa-praktikum/images/icons/icon-192x192.png",
