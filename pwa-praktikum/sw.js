@@ -1,6 +1,6 @@
 const CACHE_NAME = 'pwa-cache-v1';
 const urlsToCache = [
-  '/index.html',
+  '/pwa.html',
   '/style.css',  // Jika kamu memiliki file CSS
   '/app.js',
   '/manifest.json',
